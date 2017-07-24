@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ogrenciListe" columnCount="5" pageWidth="857" pageHeight="595" orientation="Landscape" columnWidth="166" leftMargin="14" rightMargin="12" topMargin="12" bottomMargin="14" uuid="e58a634e-b155-4b68-9aca-3e7e6c4c9c58">
+	<property name="ireport.zoom" value="5.178406821589667"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Ogr_Ad" class="java.lang.String"/>
+	<parameter name="Ogr_Numara" class="java.lang.String"/>
+	<parameter name="Ders_Adi" class="java.lang.String"/>
+	<parameter name="DersAdi" class="java.lang.String"/>
+	<field name="numara" class="java.lang.String"/>
+	<field name="isim" class="java.lang.String"/>
+	<field name="sinif" class="java.lang.String"/>
+	<variable name="variable1" class="java.lang.String" incrementType="Report" calculation="Count"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="310" height="15" uuid="207110e1-3cfe-44f3-9f08-123b8a018846"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[BİLGİSAYAR MÜHENDİSLİĞİ BÖLÜMÜ SINAV LİSTESİ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="601" y="0" width="201" height="15" uuid="5a4f3cab-fb26-4219-a9ef-440f1d693d4a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="false" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DersAdi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="3" width="159" height="15" uuid="3b8e7bb7-7f62-4bc3-a78d-1d0f30810868"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="4" y="3" width="80" height="15" uuid="43bfbd26-934b-49d8-9de8-a96788383e46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numara}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="3" width="50" height="15" uuid="e4ea5d6f-a433-44c6-a2f3-5e0e2b91e42d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true" isItalic="false" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sinif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="3" width="23" height="15" uuid="1b64ffaf-00ec-476b-925c-8ddf67fa3d31"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{isim}.split("\\s+")[0].charAt(0) + "." + $F{isim}.split("\\s+")[$F{isim}.split("\\s+").length - 1].charAt(0)
++ "."]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
