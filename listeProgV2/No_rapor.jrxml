@@ -4,6 +4,7 @@
 	<property name="ireport.zoom" value="5.0"/>
 	<property name="ireport.x" value="191"/>
 	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="Ogr_Ad" class="java.lang.String"/>
 	<parameter name="Ogr_Numara" class="java.lang.String"/>
 	<parameter name="Ders_Adi" class="java.lang.String"/>
@@ -25,21 +26,21 @@
 			<textField>
 				<reportElement x="0" y="0" width="164" height="15" uuid="04a07033-ed29-4d58-9cbc-36147252441f"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="10" isBold="true" isItalic="false" pdfEncoding="Cp1254"/>
+					<font size="10" isBold="true" isItalic="false" pdfEncoding="Cp1254" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{BolumAdi}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="640" y="0" width="164" height="15" uuid="5a4f3cab-fb26-4219-a9ef-440f1d693d4a"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="10" isBold="true" isItalic="true" pdfEncoding="Cp1254"/>
+					<font size="10" isBold="true" isItalic="false" pdfEncoding="Cp1254" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{DersAdi}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="270" y="0" width="270" height="15" uuid="6ba00b4c-219c-4c0b-98fc-3b7e98385870"/>
 				<textElement textAlignment="Center">
-					<font isBold="true"/>
+					<font isBold="true" pdfEncoding="Cp1254" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{SeansAdi}]]></textFieldExpression>
 			</textField>
