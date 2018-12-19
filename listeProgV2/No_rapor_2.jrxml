@@ -4,6 +4,7 @@
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="1"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="Ogr_Ad" class="java.lang.String"/>
 	<parameter name="Ogr_Numara" class="java.lang.String"/>
 	<parameter name="Ders_Adi" class="java.lang.String"/>
@@ -31,16 +32,17 @@
 		<band height="8" splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="115">
+		<band height="112">
 			<staticText>
-				<reportElement x="155" y="18" width="261" height="32" uuid="207110e1-3cfe-44f3-9f08-123b8a018846"/>
+				<reportElement x="141" y="18" width="300" height="32" uuid="207110e1-3cfe-44f3-9f08-123b8a018846"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
 					<font fontName="Times New Roman" size="10" isBold="true" pdfEncoding="Cp1254"/>
 				</textElement>
-				<text><![CDATA[DUMLUPINAR ÜNİVERSİTESİ REKTÖRLÜĞÜ Mühendislik Fakültesi Yoklama Sınav Tutanağı]]></text>
+				<text><![CDATA[KÜTAHYA DUMLUPINAR ÜNİVERSİTESİ REKTÖRLÜĞÜ
+	Mühendislik Fakültesi Sınav Yoklama  Tutanağı]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="268" y="0" width="33" height="18" uuid="92c23f40-38c8-4bd2-adf1-9facf7a847a1"/>
+				<reportElement x="274" y="0" width="33" height="18" uuid="92c23f40-38c8-4bd2-adf1-9facf7a847a1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
 				</textElement>
@@ -49,14 +51,14 @@
 			<staticText>
 				<reportElement x="14" y="50" width="86" height="20" uuid="5c403e71-41d2-40e4-b438-50901f7b44ca"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Times New Roman" isBold="true"/>
+					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
 				</textElement>
 				<text><![CDATA[Bölüm Adı	]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="14" y="70" width="86" height="20" uuid="2784c7f0-d6b5-48f6-b7a1-6f49a6c020f1"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Times New Roman" isBold="true"/>
+					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
 				</textElement>
 				<text><![CDATA[Ders Adı	]]></text>
 			</staticText>
@@ -135,7 +137,7 @@
 			<textField>
 				<reportElement x="114" y="52" width="236" height="16" uuid="8889a607-d515-4652-86a9-76fa3c577b52"/>
 				<textElement>
-					<font fontName="Times New Roman" size="10" isBold="true"/>
+					<font fontName="Times New Roman" size="10" isBold="true" pdfEncoding="Cp1254"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{BolumAdi}]]></textFieldExpression>
 			</textField>
@@ -146,6 +148,13 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{SeansAdi}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="212" y="92" width="60" height="18" uuid="f50f8870-98e2-4796-b57f-8eb8125312ca"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İmza]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
@@ -157,10 +166,10 @@
 				</graphicElement>
 			</rectangle>
 			<elementGroup/>
-			<textField>
+			<textField isStretchWithOverflow="true">
 				<reportElement x="91" y="2" width="99" height="15" printWhenGroupChanges="sinifGrup" uuid="f5548fdf-afcf-4c89-9571-eedf1d3ecd60"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="6" pdfEncoding="Cp1254"/>
+					<font fontName="Times New Roman" size="4" pdfEncoding="Cp1254"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{isim}]]></textFieldExpression>
 			</textField>
@@ -211,25 +220,60 @@
 				<text><![CDATA[Yukarıda belirtilen tarih ve saate yapılan ............................................................... ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="200" y="0" width="194" height="12" uuid="c9105d66-c901-490d-816f-ab64d3cc663e"/>
+				<reportElement x="194" y="0" width="160" height="12" uuid="c9105d66-c901-490d-816f-ab64d3cc663e"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="5" isBold="false" pdfEncoding="Cp1254"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{DersAdi}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[  $P{DersAdi}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="402" y="0" width="100" height="12" uuid="77bf5804-99ba-4d1c-8898-28890efddeed"/>
+				<reportElement x="386" y="0" width="100" height="12" uuid="77bf5804-99ba-4d1c-8898-28890efddeed"/>
 				<textElement>
-					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
+					<font fontName="Times New Roman" size="8" isBold="true" pdfEncoding="Cp1254"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{SinavAdi}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="503" y="0" width="55" height="12" uuid="f281c8f3-5c7b-4a51-bfee-cca4722c69e8"/>
-				<textElement verticalAlignment="Middle">
+				<reportElement x="492" y="0" width="77" height="12" uuid="f281c8f3-5c7b-4a51-bfee-cca4722c69e8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
 				</textElement>
 				<text><![CDATA[toplam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="54" width="60" height="18" uuid="2079c0f6-a782-4206-b5eb-3f9804159a82"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İmza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="54" width="60" height="18" uuid="67c1602d-962c-4283-aa44-dd236cdb3711"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İmza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="54" width="60" height="18" uuid="01e93eea-3f5d-48b2-a06b-8be352f60fbb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İmza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="54" width="60" height="18" uuid="9af18236-75d4-4f17-9b6c-47f80c40705c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İmza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="0" width="26" height="12" uuid="825340fd-a1fa-40a2-b31d-d9ed4912d586"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[dersi]]></text>
 			</staticText>
 		</band>
 	</pageFooter>
